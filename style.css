@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Heebo', sans-serif;
+    overflow-x: hidden;
+}
+.container{
+    margin: auto;
+    max-width: 1146px;
+    padding: 2rem;
+}
+a{
+    text-decoration: none;
+}
+.l-heading{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 3.8rem;
+    margin-bottom: 2rem;
+}
+.m-heading{
+    font-size: 30px;
+    margin-top: 3.8rem;
+}
+.primary-color{
+    color: #023e8a;
+}
+ul{
+    list-style: none;
+}
+.my-1{margin: 1rem 0;}
+.my-2{margin: 2rem 0;}
+.my-3{margin: 3rem 0;}
+.py-1{padding: 1rem 0;}
+.py-2{padding: 2rem 0;}
+.py-3{padding: 3rem 0;}
+.py-4{padding: 4rem 0;}
+
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+    transition: all 1s;
+}
+.btn-primary:hover{
+    cursor: pointer;
+    border: 2px solid #023e8a;
+    color: #023e8a;
+    background: transparent;
+}
+.btn-primary{
+    background-color: #023e8a;
+    border: 2px solid #023e8a;
+    color: #fff;
+}
+.btn-secondary:hover{
+    cursor: pointer;
+    border: 2px solid #57cc99;
+    color: #57cc99;
+    background: transparent;
+}
+.btn-secondary{
+    background-color: #57cc99;
+    border: 2px solid #57cc99;
+    color: #fff;
+}
+
+/* Navbar */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    opacity: .9;
+    z-index: 2;
+    text-align: center;
+}
+#navbar img{
+    width: 100px;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar .ul{
+    display: none;
+}
+#navbar .ul .u{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar ul li{
+    margin: 1rem;
+}
+#navbar ul li a{
+    color: #0096c7;
+    position: relative;
+    padding: 6px;
+    font-weight: 500;
+}
+#navbar ul li a:hover{
+    color: #023e8a;
+}
+#navbar ul li a::before{
+    content: '';
+    left: 50%;
+    top: -40px;
+    height: 115%;
+    width: 3px;
+    position: absolute;
+    background-color: #fff;
+    transform: scale(0);
+    transition: all .4s;
+}
+#navbar ul li a:hover::before{
+    transform: scale(1);
+    background-color: #023e8a;
+}
+
+
+/* showcase */
+
+#showcase{
+    background: url('./img/Ottawa-Web-Design-header.png') no-repeat center center / cover;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+}
+#showcase h1{
+    margin: .7rem 0;
+    color: #001d3d;
+}
+#showcase h3{
+    color: #023e8a;
+}
+#showcase p{
+    color: #0096c7;    
+    margin-bottom: 2rem;
+}
+#showcase .btn{
+    width: 35%;
+}
+#showcase .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+}
+#showcase .container .intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:180px;
+}
+
+/* About */
+#about{
+    display: block;
+    height: 100vh;
+    background: rgb(245, 247, 255);
+}
+#about .icon{
+    text-align: center;
+}
+#about .icon .img{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#about .icon img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+#about .icon i{
+    color: rgb(226, 226, 40);
+    margin-top: 20px;
+}
+#about .container .cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin:6rem 3rem;
+}
+#about .card{
+    box-shadow: 0 0 10px 3px #333;
+    border-radius: 10px;
+    margin: 1rem;
+    width: 260px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+#about .card:hover{
+    box-shadow: 0 0 10px 6px #333;
+    cursor: pointer;
+}
+#about .card-1{
+    background: url('./img/freelancer.png') no-repeat 30% center / cover;
+}
+
+#about .card-2{
+    background: url('./img/devenir_webdesigner_selon_un_professionnel_yann_vidal_pour_site.jpeg') no-repeat center center / cover;
+}
+#about .card-3{
+    background: url('./img/web\ developer.jpeg') no-repeat 65% center / cover;
+}
+#about .card h1{
+    font-weight: 400;
+    color: #fff;
+    position: absolute;
+    bottom: -70px;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s;
+    text-align: center;
+}
+#about .card:hover h1{
+    position: absolute;
+    transition-delay:.3s ;
+    bottom: 30%;
+    transform: translateY(-30%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Portfolio */
+#portfolio{
+    height: 1190px;
+    display: block;
+}
+#portfolio .works{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+#portfolio .works .work{
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 260px;
+    height: 300px;
+    box-shadow: 0 0 10px 3px #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+#portfolio .works .work:hover{
+    box-shadow: 0 0 10px 6px #333;
+}
+#portfolio .work-1{
+    background: url('./img/hotel.jpg') no-repeat center center / cover ;
+}
+#portfolio .work-2{
+    background: url('./img/newsgrid.jpg') no-repeat 0% center / cover ;
+}
+#portfolio .work-3{
+    background: url('./img/Introduction.jpg') no-repeat center center / cover ;
+}
+#portfolio .work-4{
+    background: url('./img/John.png') no-repeat center center / cover ;
+}
+#portfolio .work-5 {
+    background: url('./img/images.jpg') no-repeat center center / cover; 
+}
+#portfolio .work-6{
+    background: url('./img/e6190226-6484-468f-9883-eb8729b711e1-EdgeLedger.png') no-repeat center center / cover;
+}
+#portfolio .work-7{
+    background: url('./img/mebel.png') no-repeat center 10% / cover;
+}
+#portfolio .works .work h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+    transition: all .4s;
+    z-index: 100;
+}
+#portfolio .works .work a{
+    color: #222;
+    background-color: #fff; 
+    padding: 40px 150px;
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    transition: all .4s;
+    z-index: 10;
+}
+#portfolio .works .work:hover a{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+#portfolio .works .work a i{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+
+}
+#portfolio .works .work:hover h1{
+    position: absolute;
+    top: 20%;
+    transition-delay: .3s;
+}
+.card::after,
+.work::after{
+    content: '';
+    background-color: #023e8a;
+    position: absolute;
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+    transform: scale(3) translate(-200%,-200%) rotate(-28deg);
+    transition: all .5s;
+}
+.card:hover::after,
+.work:hover::after{
+    position: absolute;
+    transform: scale(3) translate(0,0) rotate(-28deg);
+}
+
+/* services */
+#services{
+    background: rgb(245, 247, 255);
+    height: 100vh;
+    display: block;
+}
+#services .service{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+}
+#services .service .service-text{
+    width: 75%;
+}
+#services .service .service-text p{
+    margin-top: 1.3rem;
+}
+#services .service-cards{
+    display: flex;
+}
+#services .service-card{
+    width: 260px;
+    height: 400px;
+    background: #fff;
+    margin: 1rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    transition: border .9s;
+    position: relative;
+}
+#services .service-card:hover{
+    border: 1px solid #001d3d;
+    box-shadow: 0 10px 10px 3px #001d3d;
+    transition: all .9s;
+}
+#services .service-card h2,
+#services .service-card h3{
+    text-align: center;
+}
+#services .service-card p{
+    margin: .7rem 2rem 0  2rem;
+    color: #001d3d;
+    padding-bottom: .4rem;
+    border-bottom: 2px solid #001d3d;
+}
+#services .service-card a{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Contact */
+#contact{
+    height: 1035px;
+    display: block;
+}
+#contact .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact .container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:#0096c7 ;
+    padding: 2rem 3rem;
+    border: 1px solid #0096c7 ;
+    border-radius: 15px;
+}
+#contact .container form input{
+    margin: 1rem;
+    width: 300px;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    border: 1px solid rgb(245, 247, 255) ;
+    outline: none;
+}
+#contact .container form button{
+    padding: 1rem 2rem;
+    width: 130px;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+
+
+/* footer */
+footer{
+    position: relative;
+    display: block;
+}
+#main-footer{
+    background: #0096c7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#main-footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:.5rem 2rem;
+}
+#main-footer .container .icon i{
+    color: #fff;
+    cursor: pointer;
+    padding: .5rem;
+    margin: .5rem;
+    border: 2px solid #0096c7;
+    border-radius: 50%;
+}
+#main-footer .container .icon i:hover{
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+
+
+@media(max-width:1145px){
+    #about{
+        height: 1785px;
+    }
+    #about .container .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #portfolio{
+        height: 1532px;
+    }
+    #portfolio .container .works{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #showcase .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+    
+}
+@media(max-width:1030px){
+    #services{
+        height: 1445px;
+    }
+    #services .service{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #services .service-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+@media(max-width:800px){
+    #showcase .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #showcase .container .intro{
+        display: flex;
+        align-items: center;
+        margin-top: 250px;
+    }
+    #showcase .container .int{
+        text-align: center;
+    }
+    #portfolio{
+        height: 2700px;
+    }
+    #portfolio .container .works{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:700px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+    #navbar ul li a::before{
+        display: none;
+    }
+    .l-heading{
+        margin-top: 5rem;
+    }
+    #service .service-text p.span{
+        display: none;
+    }
+}
+@media(max-width:570px){
+    #navbar ul{
+        display: none;
+    }
+    #navbar .ul{
+        display: block;
+    }
+    .l-heading{
+        margin-top: 8rem;
+    }
+
+}
+@media(max-width:510px){
+    #services{
+        height: 1615px;
+    }
+    #main-footer .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }#contact .container form{
+        padding: .8rem;
+    }
+    #contact .container form input{
+        width: 245px;
+    }
+    
+
+
+}
+@media(max-width:430px){
+    #services{
+        height: 1900px;
+    }
+    #contact .container form input{
+        width: 230px;
+    }
+}
